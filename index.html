@@ -3,46 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuickCan Website HomePage</title>
-    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon added -->
+  <title>QuickCan website HomePage</title>
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon added -->
   <style>
     body {
       font-family: Arial, sans-serif;
+      text-align: center;
       margin: 0;
       padding: 0;
     }
 
-    /* Styling the navigation bar */
-    nav {
-      background-color: #333;
-      overflow: hidden;
+    .icon-container {
+      margin-top: 50px;
     }
 
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-
-    nav a:hover {
-      background-color: #ddd;
+    .icon {
+      font-size: 50px;
+      margin: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      display: inline-block;
       color: black;
     }
+
+    .icon:hover {
+      transform: scale(1.2); /* Hover effect to enlarge the icon */
+    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-  <!-- Navigation bar -->
-  <nav>
-    <a href="games.html">Games</a>
-  </nav>
-
-  <h1>Welcome To the QuickCan website</h1>
-  <p>This is the homepage.i made this cause i was bored at school Currently Under Construction click games to play some games i guess.</p>
-
+  <h1>Welcome To the QuickCan Website</h1>
+  <p>This is the homepage. I made this because I was bored at school. Currently under construction!</p>
+  
+  <div class="icon-container">
+    <a href="games.html">
+      <i class="fas fa-gamepad icon"></i> <!-- Game Controller Icon -->
+    </a>
+    <a href="Music Videos.html">
+      <i class="fas fa-film icon"></i> <!-- Film Icon -->
+    </a>
+  </div>
 </body>
 </html>
