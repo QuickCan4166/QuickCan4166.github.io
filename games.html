@@ -44,23 +44,5 @@
       <i class="fas fa-film icon"></i> <!-- Film Icon -->
     </a>
   </div>
-<!-- Hidden video container -->
-  <div id="rickroll-video">
-    <h2>Rickrolled!</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <script>
-    // Get the film icon and video container
-    const filmIcon = document.getElementById('film-icon');
-    const videoContainer = document.getElementById('rickroll-video');
-
-    // When the film icon is clicked, show the Rickroll video
-    filmIcon.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent the default action of the link
-      videoContainer.style.display = 'block'; // Show the video container
-    });
-  </script>
-
 </body>
 </html>
