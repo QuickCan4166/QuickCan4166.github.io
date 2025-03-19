@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUickCAn Website Videos</title></title>
-      <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon added -->
+    <title>QuickCan Website Videos</title>
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon added -->
     <style>
         /* Basic styling for the layout */
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            height: 100vh;
+            font-family: Arial, sans-serif;
             background-color: #f0f0f0;
         }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 20px;
+        }
         
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
         .video-container {
             display: flex;
             flex-wrap: wrap;
@@ -40,7 +55,6 @@
             height: 100%;
         }
 
-        /* Make sure the layout stays responsive */
         @media screen and (max-width: 768px) {
             .video-square {
                 width: 100%;
@@ -50,6 +64,13 @@
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Videos</a>
+        <a href="#">Games</a>
+        <a href="#">Contact</a>
+    </div>
+    
     <div class="video-container">
         <!-- Rickroll Video -->
         <div class="video-square">
@@ -63,7 +84,6 @@
 
         <!-- Placeholder for additional videos -->
         <div class="video-square">
-            <!-- You can add more videos here in the future -->
             <p>More videos coming soon...</p>
         </div>
     </div>
