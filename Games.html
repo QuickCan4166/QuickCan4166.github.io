@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Navigation Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .icon-container {
+      margin-top: 50px;
+    }
+
+    .icon {
+      font-size: 50px;
+      margin: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .icon:hover {
+      transform: scale(1.2); /* Hover effect to enlarge the icon */
+    }
+  </style>
+
+  <!-- Adding Font Awesome for Icons (You can use any other icon library or your custom icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <h1>Click an Icon to Go to a Different Page</h1>
+
+  <div class="icon-container">
+    <a href="page1.html">
+      <i class="fas fa-gamepad icon"></i> <!-- Game Icon -->
+    </a>
+    <a href="page2.html">
+      <i class="fas fa-music icon"></i> <!-- Music Icon -->
+    </a>
+    <a href="page3.html">
+      <i class="fas fa-film icon"></i> <!-- Film Icon -->
+    </a>
+    <a href="page4.html">
+      <i class="fas fa-book icon"></i> <!-- Book Icon -->
+    </a>
+  </div>
+
+</body>
+</html>
