@@ -6,29 +6,55 @@
   <title>QuickCan website HomePage</title>
   <link rel="icon" type="image/png" href="favicon.png"> <!-- Favicon added -->
   <style>
-    body {
+     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
       padding: 0;
     }
 
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
     .icon-container {
       margin-top: 50px;
     }
 
-    .icon {
-      font-size: 50px;
+    .icon-img {
+      width: 80px; /* Increased icon size */
+      height: 80px;
       margin: 20px;
       cursor: pointer;
       transition: transform 0.2s;
       display: inline-block;
-      color: black;
     }
 
-    .icon:hover {
+    .icon-img:hover {
       transform: scale(1.2); /* Hover effect to enlarge the icon */
     }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+  </div>
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
