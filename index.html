@@ -55,6 +55,27 @@
       object-fit: cover;
     }
 
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .carousel-btn.left {
+      left: 10px;
+    }
+
+    .carousel-btn.right {
+      right: 10px;
+    }
+
     .icon-container {
       margin-top: 50px;
       display: flex;
@@ -96,10 +117,12 @@
   </div>
 
   <div class="carousel-container">
+    <button class="carousel-btn left" onclick="moveSlide(-1)">&#9664;</button>
+    <button class="carousel-btn right" onclick="moveSlide(1)">&#9654;</button>
     <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-item"><img src="favicon.png" alt="Slide 1"></div>
-      <div class="carousel-item"><img src="Furry PFP.png" alt="Slide 2"></div>
-      <div class="carousel-item"><img src="Ultra M.png" alt="Slide 3"></div>
+      <div class="carousel-item"><img src="slide1.jpg" alt="Slide 1"></div>
+      <div class="carousel-item"><img src="slide2.jpg" alt="Slide 2"></div>
+      <div class="carousel-item"><img src="slide3.jpg" alt="Slide 3"></div>
     </div>
   </div>
 
@@ -108,15 +131,15 @@
 
   <div class="icon-container">
     <a href="games.html" class="icon-box">
-      <img src="Game.png" alt="Games">
+      <img src="game-icon.jpg" alt="Games">
       <span>Games</span>
     </a>
     <a href="Videos.html" class="icon-box">
-      <img src="Videos.png" alt="Videos">
+      <img src="video-icon.jpg" alt="Videos">
       <span>Videos</span>
     </a>
     <a href="Contact.html" class="icon-box">
-      <img src="Contact.png" alt="Contact">
+      <img src="contact-icon.jpg" alt="Contact">
       <span>Contact</span>
     </a>
   </div>
@@ -124,13 +147,21 @@
   <script>
     const track = document.getElementById('carouselTrack');
     let index = 0;
+    let interval = setInterval(moveCarousel, 3000);
 
     function moveCarousel() {
       index = (index + 1) % 3;
       track.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    setInterval(moveCarousel, 3000);
+    function moveSlide(direction) {
+      clearInterval(interval);
+      index = (index + direction + 3) % 3;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      setTimeout(() => {
+        interval = setInterval(moveCarousel, 3000);
+      }, 5000);
+    }
   </script>
 </body>
 </html>
